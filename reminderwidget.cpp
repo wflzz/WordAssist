@@ -12,7 +12,7 @@ ReminderWidget::ReminderWidget(QWidget *parent) : QWidget(parent)
     // 时间编辑框
     timeEdit = new QTimeEdit(this);
     timeEdit->setDisplayFormat("hh:mm");
-    timeEdit->setTime(QTime(20, 0)); // 设置初始时间为晚上八点
+    timeEdit->setTime(QTime(2, 8)); // 设置初始时间为晚上八点
     layout->addWidget(timeEdit);
 
     // 启动定时提醒按钮
@@ -26,6 +26,8 @@ ReminderWidget::ReminderWidget(QWidget *parent) : QWidget(parent)
     // 连接按钮点击信号与槽函数
     connect(pushButton, &QPushButton::clicked, this, &ReminderWidget::startReminder);
     connect(pushButton_2, &QPushButton::clicked, this, &ReminderWidget::stopReminder);
+
+    startReminder();
 }
 
 void ReminderWidget::startReminder()

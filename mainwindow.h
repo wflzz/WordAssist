@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "DatabaseManager.h"
+#include <QTimeEdit>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -24,6 +25,13 @@ private:
     QString currentWord;
 
     void showRandomWord();
+
+
+    void timerEvent(QTimerEvent *event) override;
+    void startReminder();
+    void stopReminder();
+    QTimeEdit *timeEdit;
+    int timerId = 0;
 };
 
 #endif // MAINWINDOW_H
