@@ -14,30 +14,43 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="wordLabel">
+   <widget class="QToolButton" name="toolButton">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>160</y>
+      <x>610</x>
+      <y>70</y>
       <width>101</width>
-      <height>61</height>
+      <height>101</height>
      </rect>
     </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>...</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="rememberedButton">
+   <widget class="QPushButton" name="rememberButton">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>390</y>
+      <x>340</x>
+      <y>400</y>
       <width>93</width>
       <height>28</height>
      </rect>
     </property>
     <property name="text">
      <string>记住了！</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="wordLabel">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>240</y>
+      <width>69</width>
+      <height>19</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
     </property>
    </widget>
   </widget>
@@ -54,25 +67,5 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>rememberedButton</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>on_rememberedButton_clicked()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>343</x>
-     <y>436</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>267</x>
-     <y>460</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
- <slots>
-  <slot>on_rememberedButton_clicked()</slot>
- </slots>
+ <connections/>
 </ui>

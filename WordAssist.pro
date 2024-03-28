@@ -11,14 +11,20 @@ CONFIG += c++17
 SOURCES += \
     DatabaseManager.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    reminderdialog.cpp \
+    settingsdialog.cpp
 
 HEADERS += \
     DatabaseManager.h \
-    mainwindow.h
+    mainwindow.h \
+    reminderdialog.h \
+    settingsdialog.h
 
 FORMS += \
-    mainwindow.ui
+    mainwindow.ui \
+    reminderdialog.ui \
+    settingsdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
