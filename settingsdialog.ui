@@ -22,6 +22,9 @@
      <height>32</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 127);</string>
+   </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>
@@ -34,9 +37,14 @@
     <rect>
      <x>60</x>
      <y>160</y>
-     <width>118</width>
-     <height>25</height>
+     <width>161</width>
+     <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
    </property>
   </widget>
   <widget class="QCheckBox" name="reminderCheckBox">
@@ -44,12 +52,17 @@
     <rect>
      <x>60</x>
      <y>120</y>
-     <width>98</width>
+     <width>251</width>
      <height>23</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
+   </property>
    <property name="text">
-    <string>CheckBox</string>
+    <string>定时提醒功能开关</string>
    </property>
   </widget>
   <widget class="QLabel" name="totalWordsLabel">
@@ -60,6 +73,11 @@
      <width>181</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>TextLabel</string>
@@ -73,6 +91,11 @@
      <width>181</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>TextLabel</string>
