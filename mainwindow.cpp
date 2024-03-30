@@ -5,10 +5,19 @@
 #include "reminderdialog.h"
 #include <QDir>
 
+#ifdef QT_DEBUG
+QString dbPath = QDir::currentPath() + "/../WordAssist/wordlist.db";
+#else
+// 获取可执行文件所在的目录
+QString executableDir = QCoreApplication::applicationDirPath();
+// 构建数据库文件的完整路径
+QString dbPath = QDir(executableDir).filePath("wordlist.db");
+#endif
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
-    dbManager(new DatabaseManager(QDir::currentPath() + "/../WordAssist/wordlist.db")),
+    dbManager(new DatabaseManager(dbPath)),
     reminderTimer(new QTimer(this)),
     settingsDialog(new SettingsDialog(dbManager, this))
 {
